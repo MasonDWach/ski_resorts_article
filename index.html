@@ -17,7 +17,7 @@
             color: #2c3e50;
         }
         .container {
-            max-width: 1500px;
+            max-width: 900px;
             margin: auto;
             background: white;
             padding: 20px;
@@ -26,12 +26,32 @@
         }
         iframe {
             width: 100%;
-            height: 700px;
             border: none;
+        }
+        .main-map {
+            width: 100%;
+            height: 70vh;
+            max-height: 600px;
+        }
+        .small-map {
+            width: 90%;
+            height: 50vh;
+            max-height: 400px;
+            display: block;
+            margin: auto;
         }
         .map-container {
             text-align: center;
             margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .main-map {
+                height: 50vh; /* Reduce height on small screens */
+            }
+            .small-map {
+                height: 40vh; /* Adjust size for mobile */
+                width: 100%; /* Use full width on small screens */
+            }
         }
         .note {
             font-size: 12px;
@@ -54,7 +74,9 @@
 
         <div class="map-container">
             <h3>Interactive Web Map</h3>
-            <iframe src="https://masondwach.github.io/cascade-mountains-map/"></iframe>
+            <iframe class="main-map" 
+                src="https://masondwach.github.io/cascade-mountains-map/">
+            </iframe>
             <p class="note">(Explore the potential ski resort sites on this interactive map.)</p>
         </div>
 
@@ -70,6 +92,13 @@
         </p>
 
         <h2>Hawkins Mountain</h2>
+
+        <div class="map-container">
+            <iframe class = "small-map"
+                src="https://masondwach.github.io/cascade-mountains-map/#zoom=13&lat=47.46781&lon=-121.00243">
+            </iframe>
+        </div>
+
         <p>
             This site is the most feasible for developing a new ski resort. It has significant terrain above 5000 ft. 
             It experiences slightly cooler temperatures than the nearby Stevens Pass, however, it also has slightly less precipitation. 
@@ -102,6 +131,13 @@
         </p>
 
         <h2>Lookout Mountain</h2>
+
+        <div class="map-container">
+            <iframe class="small-map"
+                src="https://masondwach.github.io/cascade-mountains-map/#zoom=13&lat=47.11884&lon=-121.12625">
+            </iframe>
+        </div>
+
         <p>
             Lookout Mountain is located just south of Cle Elum. This resort also benefits from being on the I-90 corridor. 
             Most of the resort would be above 5000 feet with a vertical drop of about 2000 feet. 
@@ -120,6 +156,13 @@
         </p>
 
         <h2>Cole Butte</h2>
+        
+        <div class="map-container">
+            <iframe class="small-map"
+                src="https://masondwach.github.io/cascade-mountains-map/#zoom=13&lat=47.17891&lon=-121.23148">
+            </iframe>
+        </div>
+
         <p>
             Cole Butte is a large bowl also on the I-90 corridor to the northwest of Lookout Mountain. 
             It would benefit from the ease of access from the Seattle Area. 
@@ -136,7 +179,8 @@
             Although some Washington ski resorts have historically provided rail access, this has not been the case recently.
         </p>
 
-        <p><a href="https://yourgithubusername.github.io/yourwebmaprepo/" target="_blank">View Full Interactive Map</a></p>
+        <p><a href="https://masondwach.github.io/cascade-mountains-map/" target="_blank">View Full Interactive Map</a></p>
     </div>
 </body>
 </html>
+
